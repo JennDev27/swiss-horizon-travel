@@ -1,0 +1,508 @@
+/* Hero */
+.hero-cultura {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: rgb(58, 4, 4);
+}
+
+.hero-cultura .contenido-hero {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hero-cultura h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    animation: aparecerHero 1s ease forwards;
+}
+
+.hero-cultura p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    opacity: 0.9;
+    animation: aparecerHero 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Texto introductorio */
+.intro-cultura {
+    position: relative;
+    padding: 100px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(90, 7, 8, 0.03) 0%, rgba(138, 10, 12, 0.05) 100%);
+    overflow: hidden;
+}
+
+/* Iconos divididos */
+.intro-cultura::after {
+    content: '';
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #5a0708ff, transparent);
+    margin: 40px auto 0;
+}
+
+/* Sección cultura */
+.seccion-cultura-detalle {
+    padding: 100px 8%;
+    background: #fafafa;
+}
+
+.seccion-cultura-detalle:nth-child(even) {
+    background: white;
+}
+
+.contenido-cultura-detalle {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título de sección */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-seccion h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #5a0708ff;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion p {
+    font-size: 16px;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid de elementos culturales */
+.grid-cultural {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.tarjeta-cultura {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.tarjeta-cultura.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tarjeta-cultura:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-cultura .icono-tarjeta {
+    width: 70px;
+    height: 70px;
+    background: rgba(245, 235, 235, 0.575);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-cultura .icono-tarjeta img {
+    width: 75px;
+    height: 75px;
+}
+
+.tarjeta-cultura:hover .icono-tarjeta {
+    background: #5a0708ff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.tarjeta-cultura h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #5a0708ff;
+    margin-bottom: 15px;
+}
+
+.tarjeta-cultura p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Sección de los idiomas */
+.seccion-idiomas {
+    position: relative;
+    padding: 100px 8%;
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    overflow: hidden;
+}
+
+/* Elementos decorativos */
+.seccion-idiomas::after {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    font-size: 100px;
+    opacity: 0.03;
+    transform: rotate(15deg);
+}
+
+.contenedor-idiomas {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.tarjeta-idioma {
+    position: relative;
+    background: white;
+    border-radius: 25px;
+    padding: 45px 35px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid rgba(90, 7, 8, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.tarjeta-idioma::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #5a0708ff, #8a0a0c);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-idioma:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(90, 7, 8, 0.15);
+    border-color: #5a0708ff;
+}
+
+.tarjeta-idioma:hover::before {
+    transform: scaleX(1);
+}
+
+.tarjeta-idioma .bandera {
+    font-size: 56px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.tarjeta-idioma h4 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #5a0708ff;
+    margin-bottom: 8px;
+}
+
+.tarjeta-idioma .region {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.tarjeta-idioma p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Sección de tradiciones */
+.seccion-tradiciones {
+    padding: 100px 8%;
+    background: #fafafa;
+}
+
+.timeline-tradiciones {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.item-tradicion {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease;
+}
+
+.item-tradicion:nth-child(even) {
+    flex-direction: row-reverse;
+    transform: translateX(30px);
+}
+
+.item-tradicion.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.item-tradicion .imagen-tradicion {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.item-tradicion .imagen-tradicion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-tradicion .contenido-tradicion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-tradicion h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #5a0708ff;
+    margin-bottom: 10px;
+}
+
+.item-tradicion .fecha {
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.item-tradicion p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Responsive */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero-cultura h1 {
+        font-size: 55px;
+    }
+
+    .intro-cultura {
+        padding: 70px 6%;
+    }
+
+    .seccion-cultura-detalle {
+        padding: 80px 6%;
+    }
+
+    .grid-cultural {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tarjeta-cultura {
+        padding: 30px;
+    }
+
+    .contenedor-idiomas {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .item-tradicion {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .item-tradicion .imagen-tradicion {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .hero-cultura {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .hero-cultura h1 {
+        font-size: 40px;
+    }
+
+    .hero-cultura p {
+        font-size: 18px;
+    }
+
+    .intro-cultura {
+        padding: 50px 5%;
+    }
+
+    .titulo-seccion h3 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .titulo-seccion p {
+        font-size: 15px;
+    }
+
+    .seccion-cultura-detalle {
+        padding: 60px 5%;
+    }
+
+    .tarjeta-cultura {
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .tarjeta-cultura .icono-tarjeta {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .tarjeta-cultura .icono-tarjeta img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tarjeta-cultura h4 {
+        font-size: 18px;
+    }
+
+    .tarjeta-cultura p {
+        font-size: 14px;
+    }
+
+    .seccion-idiomas {
+        padding: 60px 5%;
+    }
+
+    .tarjeta-idioma {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .tarjeta-idioma .bandera {
+        font-size: 48px;
+    }
+
+    .tarjeta-idioma h4 {
+        font-size: 22px;
+    }
+
+    .tarjeta-idioma p {
+        font-size: 14px;
+    }
+
+    .seccion-tradiciones {
+        padding: 60px 5%;
+    }
+
+    .item-tradicion {
+        margin-bottom: 40px;
+    }
+
+    .item-tradicion .imagen-tradicion {
+        height: 200px;
+        border-radius: 15px;
+    }
+
+    .item-tradicion h4 {
+        font-size: 20px;
+    }
+
+    .item-tradicion p {
+        font-size: 14px;
+    }
+}
+
+/* Celulares más pequeños */
+@media (max-width: 480px) {
+    .hero-cultura h1 {
+        font-size: 32px;
+    }
+
+    .hero-cultura p {
+        font-size: 16px;
+    }
+
+    .titulo-seccion h3 {
+        font-size: 20px;
+    }
+
+    .tarjeta-idioma .bandera {
+        font-size: 40px;
+    }
+
+    .tarjeta-idioma h4 {
+        font-size: 18px;
+    }
+
+    .item-tradicion h4 {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .hero-cultura h1 {
+        font-size: 80px;
+    }
+
+    .grid-cultural {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .tarjeta-cultura {
+        padding: 40px;
+    }
+}

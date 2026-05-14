@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="description" content="Swiss Horizon Travel - Descubre los mejores destinos, cultura y experiencias de Suiza. Viajes turísticos, naturaleza alpina, ciudades históricas y tradiciones suizas.">
+    <meta name="keywords" content="Suiza, viajes, turismo, destinos suizos, cultura suiza, experiencias alpinas, Zúrich, Ginebra, Basilea">
+    <title>Swiss Horizon Travel - Descubre Suiza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Tipografías-->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!--Menú-->
+<header class="navbar" role="banner">
+
+    <div class="logo">
+        <a href="index.html" aria-label="Swiss Horizon Travel - Inicio">
+            <img src="assets/logo.webp" alt="Logo de la página">
+        </a>
+    </div>
+    <p id="mensaje-dia" class="mensaje-dia"></p>
+
+    <nav role="navigation" aria-label="Navegación principal">
+        <ul class="menu" role="menubar">
+            <li role="none"><a href="index.html" class="activo" role="menuitem" data-lang-es="Inicio" data-lang-en="Home" aria-current="page">Inicio</a></li>
+            <li class="dropdown">
+                <a href="paginas/destinos.html">Destinos</a>
+
+                <ul class="submenu">
+                    <li><a href="paginas/destinos.html#zurich">Zúrich</a></li>
+                    <li><a href="paginas/destinos.html#geneva">Ginebra</a></li>
+                    <li><a href="paginas/destinos.html#basilea">Basilea</a></li>
+                    <li><a href="paginas/destinos.html#lucerne">Lucerna</a></li>
+                    <li><a href="paginas/destinos.html#zermatt">Zermatt</a></li>
+                    <li><a href="paginas/destinos.html#interlaken">Interlaken</a></li>
+                </ul>
+            </li>
+            <li role="none"><a href="paginas/cultura.html" role="menuitem" data-lang-es="Cultura" data-lang-en="Culture">Cultura</a></li>
+            <li role="none"><a href="paginas/experiencias.html" role="menuitem" data-lang-es="Experiencias" data-lang-en="Experiences">Experiencias</a></li>
+            <li role="none"><a href="paginas/contacto.html" role="menuitem" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="idioma" role="group" aria-label="Selector de idioma">
+        <a href="#" class="activo-idioma" onclick="cambiarIdioma('es'); return false;" aria-label="Cambiar a español" lang="es">Es</a>
+        <span class="separador" aria-hidden="true"></span>
+        <a href="#" onclick="cambiarIdioma('en'); return false;" aria-label="Switch to English" lang="en">En</a>
+    </div>
+</header>
+    
+<!--Hero-->
+<section class="hero" aria-labelledby="titulo-hero">
+    <div class="video-fondo" role="presentation">
+        <video autoplay muted loop playsinline class="video-fondo" aria-hidden="true">
+            <source src="assets/imagenes/video.mp4" type="video/mp4">
+            <p>Tu navegador no soporta video HTML5. <a href="paginas/destinos.html">Ver destinos</a></p>
+        </video>
+    </div>
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="contenido-hero">
+        <h1 id="titulo-hero" data-lang-es="Descubre Suiza" data-lang-en="Discover Switzerland">Descubre Suiza</h1>
+        <p data-lang-es="Naturaleza, cultura, gastronomía y precisión alpina" data-lang-en="Nature, culture, gastronomy and alpine precision">Naturaleza, cultura, gastronomía y precisión alpina</p>
+        <button onclick="scrollToDestinos()" class="cta" data-lang-es="Descubrir Destinos" data-lang-en="Discover Destinations" aria-label="Ir a la sección de destinos populares">Descubrir Destinos</button>
+    </div>
+</section>
+
+<main id="main-content">
+
+<!--Destinos-->
+<section id="destinos" class="seccion-destinos" aria-labelledby="titulo-destinos">
+
+    <div class="titulo-destinos">
+        <h2 id="titulo-destinos" data-lang-es="DESTINOS POPULARES" data-lang-en="POPULAR DESTINATIONS">DESTINOS POPULARES</h2>
+        <p data-lang-es="Conoce las ciudades y pueblos más emblemáticos de Suiza" data-lang-en="Discover the most emblematic cities and towns of Switzerland">Conoce las ciudades y pueblos más emblemáticos de Suiza</p>
+    </div>
+
+    <div class="contenedor-cards" role="list">
+
+        <article class="card-destino" role="listitem">
+            <figure>
+                <img src="assets/imagenes/zurich.webp" alt="Vista panorámica de la ciudad de Zúrich con su lago y casco antiguo medieval">
+                <figcaption class="visually-hidden">Zúrich</figcaption>
+            </figure>
+            <div class="contenido-card">
+                <h3 data-lang-es="Zúrich" data-lang-en="Zurich">Zúrich</h3>
+                <p data-lang-es="La ciudad más grande de Suiza, conocida por su lago, su casco antiguo medieval y su vibrante vida cultural." data-lang-en="The largest city in Switzerland, known for its lake, its medieval old town, and its vibrant cultural life.">La ciudad más grande de Suiza, conocida por su lago, su casco antiguo medieval y su vibrante vida cultural.</p>
+                <a href="paginas/destinos.html" class="btn-info" data-lang-es="Más información →" data-lang-en="More information →" aria-label="Más información sobre Zúrich">Más información →</a>
+            </div>
+        </article>
+
+        <article class="card-destino" role="listitem">
+            <figure>
+                <img src="assets/imagenes/ginebra.webp" alt="Vista del lago de Ginebra con el famoso Jet d’Eau y la ciudad al fondo">
+                <figcaption class="visually-hidden">Ginebra</figcaption>
+            </figure>
+            <div class="contenido-card">
+                <h3 data-lang-es="Ginebra" data-lang-en="Geneva">Ginebra</h3>
+                <p data-lang-es="Ciudad internacional a orillas del lago Lemán, famosa por su Jet d’Eau y su ambiente cosmopolita." data-lang-en="An international city on the shores of Lake Geneva, famous for its Jet d’Eau and its cosmopolitan atmosphere.">Ciudad internacional a orillas del lago Lemán, famosa por su Jet d’Eau y su ambiente cosmopolita.</p>
+                <a href="paginas/destinos.html" class="btn-info" data-lang-es="Más información →" data-lang-en="More information →" aria-label="Más información sobre Ginebra">Más información →</a>
+            </div>
+        </article>
+
+        <article class="card-destino" role="listitem">
+            <figure>
+                <img src="assets/imagenes/basilea.webp" alt="Vista de Basilea con el río Rin y su arquitectura histórica">
+                <figcaption class="visually-hidden">Basilea</figcaption>
+            </figure>
+            <div class="contenido-card">
+                <h3 data-lang-es="Basilea" data-lang-en="Basel">Basilea</h3>
+                <p data-lang-es="Ciudad cultural a orillas del Rin, conocida por su arquitectura histórica y su vibrante escena artística." data-lang-en="A cultural city on the banks of the Rhine, known for its historic architecture and vibrant art scene.">Ciudad cultural a orillas del Rin, conocida por su arquitectura histórica y su vibrante escena artística.</p>
+                <a href="paginas/destinos.html" class="btn-info" data-lang-es="Más información →" data-lang-en="More information →" aria-label="Más información sobre Basilea">Más información →</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!--Cultura-->
+<section id="cultura" class="seccion-cultura" aria-labelledby="titulo-cultura">
+
+    <div class="contenedor-cultura">
+
+        <div class="imagen-cultura">
+            <figure>
+                <img src="assets/imagenes/cultura.webp" alt="Escena cultural suiza con tradiciones alpinas y arquitectura histórica">
+                <figcaption class="visually-hidden">Cultura y tradiciones suizas</figcaption>
+            </figure>
+        </div>
+
+        <div class="contenido-cultura">
+
+            <div class="titulo-cultura">
+                <h2 id="titulo-cultura" data-lang-es="CULTURA Y TRADICIONES" data-lang-en="CULTURE AND TRADITIONS">CULTURA Y TRADICIONES</h2>
+            </div>
+
+            <dl class="grid-cultura">
+
+                <div class="info-cultura">
+                    <div class="icono-cultura" role="img" aria-label="Icono de idiomas">
+                        <img src="assets/iconos/idioma-icono.webp" alt="Icono representativo de idiomas" class="icono-img">
+                    </div>
+                    <div class="texto-cultura">
+                        <dt data-lang-es="Idiomas" data-lang-en="Languages">Idiomas</dt>
+                        <dd class="subtexto-cultura" data-lang-es="4 idiomas oficiales." data-lang-en="4 official languages.">4 idiomas oficiales.</dd>
+                    </div>
+                </div>
+
+                <div class="info-cultura">
+                    <div class="icono-cultura" role="img" aria-label="Icono de cantones">
+                        <img src="assets/iconos/cantones-icono.webp" alt="Icono representativo de los cantones" class="icono-img">
+                    </div>
+                    <div class="texto-cultura">
+                        <dt data-lang-es="Cantones" data-lang-en="Cantons">Cantones</dt>
+                        <dd class="subtexto-cultura" data-lang-es="26 cantones autónomos." data-lang-en="26 autonomous cantons.">26 cantones autónomos.</dd>
+                    </div>
+                </div>
+
+                <div class="info-cultura">
+                    <div class="icono-cultura" role="img" aria-label="Icono de ciudades históricas">
+                        <img src="assets/iconos/ciudad-icono.webp" alt="Icono representativo de las ciudades" class="icono-img">
+                    </div>
+                    <div class="texto-cultura">
+                        <dt data-lang-es="Ciudades históricas" data-lang-en="Historic cities">Ciudades históricas</dt>
+                        <dd class="subtexto-cultura" data-lang-es="Historia aún viva en cada rincón." data-lang-en="History still alive in every corner.">Historia aún viva en cada rincón.</dd>
+                    </div>
+                </div>
+
+                <div class="info-cultura">
+                    <div class="icono-cultura" role="img" aria-label="Icono de tradiciones alpinas">
+                        <img src="assets/iconos/tradiciones-icono.webp" alt="Icono representativo de tradiciones" class="icono-img">
+                    </div>
+                    <div class="texto-cultura">
+                        <dt data-lang-es="Tradiciones alpinas" data-lang-en="Alpine traditions">Tradiciones alpinas</dt>
+                        <dd class="subtexto-cultura" data-lang-es="Folclore, música y festivales de montaña." data-lang-en="Folklore, music and mountain festivals.">Folclore, música y festivales de montaña.</dd>
+                    </div>
+                </div>
+
+            </dl>
+
+            <a href="paginas/cultura.html" class="btn-cultura" aria-label="Descubrir más sobre la cultura suiza">
+                <span class="texto-btn" data-lang-es="Descubrir cultura" data-lang-en="Discover culture">Descubrir cultura</span>
+                <span class="flecha-btn" aria-hidden="true">
+                    <img src="assets/iconos/flechabtn-icono.webp" alt="">
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+</section>
+
+<!--Experiencias-->
+<section id="experiencias" class="seccion-experiencias" aria-labelledby="titulo-experiencias">
+
+    <h2 id="titulo-experiencias" class="titulo-experiencias" data-lang-es="EXPERIENCIAS ALPINAS" data-lang-en="ALPINE EXPERIENCES">EXPERIENCIAS ALPINAS</h2>
+
+    <div class="contenedor-experiencias" role="list">
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de esquí">
+                <img src="assets/iconos/esqui-icono.webp" alt="Icono representativo del esquí" class="icono-img">
+            </div>
+            <p data-lang-es="Esquí y snowboard" data-lang-en="Skiing and snowboarding">Esquí y snowboard</p>
+        </a>
+
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de museo">
+                <img src="assets/iconos/museo-icono.webp" alt="Icono representativo de los museos" class="icono-img">
+            </div>
+            <p data-lang-es="Museos" data-lang-en="Museums">Museos</p>
+        </a>
+
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de ciclismo">
+                <img src="assets/iconos/ciclismo-icono.webp" alt="Icono representativo del ciclismo" class="icono-img">
+            </div>
+            <p data-lang-es="Ciclismo" data-lang-en="Cycling">Ciclismo</p>
+        </a>
+
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de lagos">
+                <img src="assets/iconos/lagos-icono.webp" alt="Icono representativo de los lagos" class="icono-img">
+            </div>
+            <p data-lang-es="Lagos" data-lang-en="Lakes">Lagos</p>
+        </a>
+
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de chocolate">
+                <img src="assets/iconos/chocolate-icono.webp" alt="Icono representativo del chocolate" class="icono-img">
+            </div>
+            <p data-lang-es="Chocolate" data-lang-en="Chocolate">Chocolate</p>
+        </a>
+
+        <a href="paginas/experiencias.html" class="item-experiencia" role="listitem">
+            <div class="icono-experiencia" role="img" aria-label="Icono de trenes panorámicos">
+                <img src="assets/iconos/trenes-icono.webp" alt="Icono representativo de los trenes" class="icono-img">
+            </div>
+            <p data-lang-es="Trenes panorámicos" data-lang-en="Panoramic trains">Trenes panorámicos</p>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-marca">
+            <img src="assets/logo.webp" alt="Logo de la página" class="logo-footer">
+            <div>
+                <h3>Swiss Horizon Travel</h3>
+                <p class="tagline" data-lang-es="Descubre la esencia de Suiza" data-lang-en="Discover the essence of Switzerland">Descubre la esencia de Suiza</p>
+            </div>
+        </div>
+
+        <div class="footer-contacto">
+            <h4 data-lang-es="Contáctanos" data-lang-en="Contact Us">Contáctanos</h4>
+            <p>+41 251 137 637</p>
+            <p>info@swisshorizontravel.ch</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p data-lang-es="© 2026 Swiss Horizon Travel. Todos los derechos reservados." data-lang-en="© 2026 Swiss Horizon Travel. All rights reserved.">© 2026 Swiss Horizon Travel. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/script-lang.js"></script>
+</body>
+</html>
